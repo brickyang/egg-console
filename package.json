@@ -51,12 +51,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-console.git"
+    "url": "git+https://github.com/brickyang/egg-console.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/brickyang/egg-console/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-console#readme",
+  "homepage": "https://github.com/brickyang/egg-console#readme",
   "author": "brickyang <brick.c.yang@gmail.com>",
   "license": "MIT"
 }
