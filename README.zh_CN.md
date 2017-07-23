@@ -20,6 +20,8 @@
 [download-image]: https://img.shields.io/npm/dm/egg-console.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-console
 
+[**English**](https://github.com/brickyang/egg-console/blob/master/README.md)
+
 此插件会将所有请求及其结果打印在屏幕及文件中，类似于 [morgan](https://github.com/expressjs/morgan)，以便于开发者随时调试和查看应用运行情况。
 
 通常情况下，其打印信息为 `[$userId/$ip/$traceId/${cost}ms $method $url] $status`。如果结果异常，则会同时打印出 `error`。如果设置为 `debug`，则也会打印出 `request.body`。
