@@ -9,12 +9,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-console.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-console
-[travis-image]: https://img.shields.io/travis/eggjs/egg-console.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-console
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-console.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-console?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-console.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-console
+[travis-image]: https://img.shields.io/travis/brickyang/egg-console.svg?style=flat-square
+[travis-url]: https://travis-ci.org/brickyang/egg-console
+[codecov-image]: https://img.shields.io/codecov/c/github/brickyang/egg-console.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/brickyang/egg-console?branch=master
+[david-image]: https://img.shields.io/david/brickyang/egg-console.svg?style=flat-square
+[david-url]: https://david-dm.org/brickyang/egg-console
 [snyk-image]: https://snyk.io/test/npm/egg-console/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-console
 [download-image]: https://img.shields.io/npm/dm/egg-console.svg?style=flat-square
