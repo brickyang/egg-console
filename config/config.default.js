@@ -9,6 +9,7 @@
  * @property {String} debug - some description
  */
 exports.console = {
+  ignore: '/favicon.ico',
   success: 'green',
   error: 'red',
   debug: 'gray',
