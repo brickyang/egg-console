@@ -28,6 +28,14 @@ Generally, it prints `[$userId/$ip/$traceId/${cost}ms $method $url] $status`. If
 
 This plugin needs [egg-logger](https://github.com/eggjs/egg-logger) which is a built-in plugin of egg.js. It bases on `ctx.logger`, so the options of it will also impact this plugin.
 
+**info Mode**
+
+![](https://raw.githubusercontent.com/brickyang/egg-console/master/screen/info.png)
+
+**debug Mode**
+
+![](https://raw.githubusercontent.com/brickyang/egg-console/master/screen/debug.png)
+
 ## Install
 
 ### NPM

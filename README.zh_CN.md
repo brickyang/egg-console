@@ -28,6 +28,14 @@
 
 此插件基于 [egg-logger](https://github.com/eggjs/egg-logger) 的 `ctx.logger` 工作。因此对 `egg-logger` 的设置也会对此插件生效。
 
+**info 模式**
+
+![](https://raw.githubusercontent.com/brickyang/egg-console/master/screen/info.png)
+
+**debug 模式**
+
+![](https://raw.githubusercontent.com/brickyang/egg-console/master/screen/debug.png)
+
 ## 安装
 
 ### NPM
