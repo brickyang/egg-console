@@ -1,6 +1,6 @@
 {
   "name": "egg-console",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Egg.js plugin to make your debug more easier.",
   "eggPlugin": {
     "name": "console"
