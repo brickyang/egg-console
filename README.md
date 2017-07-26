@@ -22,7 +22,7 @@
 
 [**中文版**](https://github.com/brickyang/egg-console/blob/master/README.zh_CN.md)
 
-This plug works like [morgan](https://github.com/expressjs/morgan), prints all request & result both to console and local file.
+This pluging works like [morgan](https://github.com/expressjs/morgan), prints all request & result both to console and local file.
 
 Generally, it prints `[$userId/$ip/$traceId/${cost}ms $method $url] $status`. If there's an error, it will print the error attached. If the `config.consoleLevel` is set to `debug`, it will prints the request body as json format attached.
 
