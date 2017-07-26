@@ -21,13 +21,13 @@ describe('test/console.test.js', () => {
       .expect(200);
   });
 
-  it('should status 400', () => {
+  it('should status 404', () => {
     return request(app.callback())
       .get('/error')
-      .expect(400);
+      .expect(404);
   });
 
-  it('should status 400', () => {
+  it('should status 400 and throw', () => {
     return request(app.callback())
       .get('/throw')
       .expect(400);

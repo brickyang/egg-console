@@ -5,11 +5,10 @@ module.exports = app => {
     this.status = 200;
   });
   app.get('/error', function* () {
-    this.status = 400;
+    this.status = 404;
   });
   app.get('/throw', function* () {
-    this.status = 400;
-    throw new Error();
+    this.throw(400);
   });
   app.post('/', function* () {
     this.status = 201;

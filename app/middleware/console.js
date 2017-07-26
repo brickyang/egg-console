@@ -20,15 +20,16 @@ module.exports = (options, app) => {
         status = colors[error](ctx.status);
       }
 
-      if (level === 'debug') {
-        const body = colors[debug](JSON.stringify(ctx.request.body));
+      if (level === 'debug' && ctx.request.method.toUpperCase() !== 'GET') {
+        const body = colors[debug]('\n', JSON.stringify(ctx.request.body));
         message.push(body);
       }
     } catch (err) {
-      status = colors[error](ctx.status);
+      status = colors[error](err.status);
       level = 'warn';
-      message.push(err);
-      ctx.throw(err);
+      message.push('\n', err);
+
+      ctx.status = err.status;
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);
