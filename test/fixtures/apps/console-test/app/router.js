@@ -8,7 +8,6 @@ module.exports = app => {
     this.status = 400;
   });
   app.get('/throw', function* () {
-    this.status = 400;
     throw new Error();
   });
   app.post('/', function* () {

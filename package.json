@@ -5,7 +5,13 @@
   "eggPlugin": {
     "name": "console"
   },
-  "keywords": ["egg", "eggPlugin", "egg-plugin", "logger", "egg-logger"],
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "logger",
+    "egg-logger"
+  ],
   "dependencies": {
     "colors": "^1.1.2",
     "egg-logger": "^1.6.0"
@@ -34,7 +40,12 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod"
   },
-  "files": ["app", "lib", "config", "app.js"],
+  "files": [
+    "app",
+    "lib",
+    "config",
+    "app.js"
+  ],
   "ci": {
     "version": "6, 8"
   },
