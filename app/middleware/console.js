@@ -29,6 +29,8 @@ module.exports = (options, app) => {
       status = colors[error](err.status);
       level = 'warn';
       message.push('\n', err);
+
+      ctx.status = err.status;
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);
