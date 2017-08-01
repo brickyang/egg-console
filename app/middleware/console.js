@@ -7,7 +7,8 @@ module.exports = (options, app) => {
     options = validate(options);
     const { success, error, debug } = options;
     let status;
-    let level = (options.consoleLevel || app.config.logger.consoleLevel).toLowerCase();
+    let level = (options.consoleLevel || app.config.logger.consoleLevel)
+      .toLowerCase();
     const message = [];
 
     try {
@@ -25,7 +26,7 @@ module.exports = (options, app) => {
         message.push(body);
       }
     } catch (err) {
-      status = colors[error](ctx.status);
+      status = colors[error](err.status);
       level = 'warn';
       message.push('\n', err);
     } finally {
