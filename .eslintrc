@@ -1,3 +1,11 @@
 {
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "newline-per-chained-call": [0, { "ignoreChainWithDepth": 2 }],
+    "no-loop-func": 0
+  },
   "extends": "eslint-config-egg"
 }

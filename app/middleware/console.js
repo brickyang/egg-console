@@ -26,11 +26,11 @@ module.exports = (options, app) => {
         message.push(body);
       }
     } catch (err) {
-      status = colors[error](err.status);
+      status = colors[error](err.status || 500);
       level = 'warn';
       message.push('\n', err);
 
-      ctx.status = err.status || ctx.status;
+      ctx.status = status;
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);
