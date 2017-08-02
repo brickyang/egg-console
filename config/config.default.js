@@ -14,3 +14,8 @@ exports.console = {
   error: 'red',
   debug: 'gray',
 };
+
+exports.logger = {
+  level: 'warn',
+  consoleLevel: 'debug',
+};
