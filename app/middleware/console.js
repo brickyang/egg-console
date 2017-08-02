@@ -30,7 +30,7 @@ module.exports = (options, app) => {
       level = 'warn';
       message.push('\n', err);
 
-      ctx.status = err.status;
+      ctx.status = err.status || ctx.status;
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);
