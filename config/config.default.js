@@ -11,9 +11,5 @@
 exports.console = {
   ignore: [ '/favicon.ico', '/robots.txt' ],
   debug: true,
-  colors: {
-    success: 'green',
-    error: 'red',
-    debug: 'gray',
-  },
+  error: true,
 };

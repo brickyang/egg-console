@@ -1,11 +1,9 @@
 'use strict';
-const colors = require('colors');
-const validate = require('../../lib/validate');
+const { red, green, grey } = require('colors');
 
 module.exports = options => {
   return async function(ctx, next) {
-    options = validate(options);
-    const { debug, colors } = options;
+    const { debug, error } = options;
     let status;
     let level = 'info';
     const message = [];
@@ -14,26 +12,28 @@ module.exports = options => {
       await next();
 
       if (ctx.status < 400) {
-        status = colors[colors.success](ctx.status);
+        status = green(ctx.status);
       } else {
         level = 'warn';
-        status = colors[colors.error](ctx.status);
+        status = red(ctx.status);
       }
 
       if (debug && ctx.request.method.toUpperCase() !== 'GET') {
-        const body = colors[colors.debug](
-          '\n',
-          JSON.stringify(ctx.request.body || {})
-        );
+        const body = grey('\n', JSON.stringify(ctx.request.body));
 
         message.push(body);
       }
     } catch (err) {
       ctx.status = err.status || 500;
 
-      level = 'warn';
-      status = colors[colors.error](ctx.status);
-      message.push('\n', err);
+      if (ctx.status === 500) level = 'error';
+      else level = 'warn';
+
+      status = red(ctx.status);
+
+      if (error) {
+        message.push('\n', err);
+      }
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);

@@ -15,9 +15,16 @@ describe('test/console.config.test.js', () => {
   after(() => app.close());
   afterEach(mm.restore);
 
-  it('should status 200', () => {
-    return request(app.callback())
-      .get('/')
-      .expect(200);
+  it('should status 400 and no error stack', () => {
+    return request(app.callback()).get('/error').expect(400);
+  });
+
+  it('should status 500 and no error stack', () => {
+    return request(app.callback()).get('/throw').expect(500);
+  });
+
+  it('should status 201 and no request body', () => {
+    app.mockCsrf();
+    return request(app.callback()).post('/').send({ foo: 'bar' }).expect(201);
   });
 });

@@ -23,12 +23,16 @@ describe('test/console.test.js', () => {
     return request(app.callback()).get('/error').expect(400);
   });
 
+  it('should status 422', () => {
+    return request(app.callback()).get('/throw422').expect(422);
+  });
+
   it('should status 500', () => {
-    return request(app.callback()).get('/throw').expect(500);
+    return request(app.callback()).get('/throw500').expect(500);
   });
 
   it('should status 201', () => {
     app.mockCsrf();
-    return request(app.callback()).post('/').expect(201);
+    return request(app.callback()).post('/').send({ foo: 'bar' }).expect(201);
   });
 });

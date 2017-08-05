@@ -2,6 +2,6 @@
 
 exports.keys = '123456';
 
-exports.console = {
-  consoleLevel: 'debug',
+exports.logger = {
+  consoleLevel: 'info',
 };

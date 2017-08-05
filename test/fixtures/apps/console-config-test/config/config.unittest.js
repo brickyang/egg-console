@@ -3,7 +3,10 @@
 exports.keys = '123456';
 
 exports.console = {
-  success: 'nocolor',
-  error: 'nocolor',
-  debug: 'nocolor',
+  debug: false,
+  error: false,
+};
+
+exports.logger = {
+  consoleLevel: 'info',
 };

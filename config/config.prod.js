@@ -2,4 +2,5 @@
 
 exports.console = {
   debug: false,
+  error: false,
 };

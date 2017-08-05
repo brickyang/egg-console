@@ -38,7 +38,6 @@
   },
   "files": [
     "app",
-    "lib",
     "config",
     "app.js"
   ],
