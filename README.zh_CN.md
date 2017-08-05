@@ -61,14 +61,15 @@ exports.console = {
 ```js
 // {app_root}/config/config.default.js
 exports.console = {
-  consoleLevel: 'info',
-  success: 'green',
-  error: 'red',
-  debug: 'gray',
+  // local 环境下默认值均为 true，prod 环境下均为 false
+  debug: true,
+  error: true,
 };
 ```
 
-如果没有设置 `consoleLevel` 则默认使用 `config.logger.consoleLevel`。
+**debug:** 是否打印 request body 信息。
+
+**error:** 是否打印 error stack 信息。生产环境中默认不打印，可以查看 `common-error.log` 获得 error 的具体内容。
 
 关于配置的说明请查看 [config/config.default.js](config/config.default.js)。
 

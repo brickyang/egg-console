@@ -61,14 +61,15 @@ exports.console = {
 ```js
 // {app_root}/config/config.default.js
 exports.console = {
-  consoleLevel: 'info',
-  success: 'green',
-  error: 'red',
-  debug: 'gray',
+  // both default true in local env and false in prod env.
+  debug: true,
+  error: true,
 };
 ```
 
-If the `consoleLevel` is not given, the `config.logger.consoleLevel` will work.
+**debug:** In this set the plugin will print the request body.
+
+**error:** If false, the plugin will not print the error's stack. You should check the `common-error.log` for details of error.
 
 see [config/config.default.js](config/config.default.js) for more detail.
 
