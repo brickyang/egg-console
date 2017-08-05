@@ -2,13 +2,12 @@
 const colors = require('colors');
 const validate = require('../../lib/validate');
 
-module.exports = (options, app) => {
+module.exports = options => {
   return async function(ctx, next) {
     options = validate(options);
     const { success, error, debug } = options;
     let status;
-    let level = (options.consoleLevel || app.config.logger.consoleLevel)
-      .toLowerCase();
+    let level = options.level || 'info';
     const message = [];
 
     try {
@@ -22,15 +21,18 @@ module.exports = (options, app) => {
       }
 
       if (level === 'debug' && ctx.request.method.toUpperCase() !== 'GET') {
-        const body = colors[debug]('\n', JSON.stringify(ctx.request.body));
+        const body = colors[debug](
+          '\n',
+          JSON.stringify(ctx.request.body || {})
+        );
         message.push(body);
       }
     } catch (err) {
-      status = colors[error](err.status);
-      level = 'warn';
-      message.push('\n', err);
+      ctx.status = err.status || 500;
 
-      ctx.status = err.status || ctx.status;
+      level = 'warn';
+      status = colors[error](ctx.status);
+      message.push('\n', err);
     } finally {
       message.unshift(status);
       ctx.logger[level](...message);

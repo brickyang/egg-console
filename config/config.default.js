@@ -9,13 +9,9 @@
  * @property {String} debug - some description
  */
 exports.console = {
-  ignore: '/favicon.ico',
+  ignore: [ '/favicon.ico', '/robots.txt' ],
+  level: 'debug',
   success: 'green',
   error: 'red',
   debug: 'gray',
-};
-
-exports.logger = {
-  level: 'warn',
-  consoleLevel: 'debug',
 };

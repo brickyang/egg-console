@@ -1,5 +1,5 @@
 'use strict';
 
 exports.console = {
-  enable: false,
+  level: 'info',
 };
